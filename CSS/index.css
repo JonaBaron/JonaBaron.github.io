@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@font-face {
+    font-family: 'The Binary Baron'; /* Nom de votre police */
+    src: url('/Other/CfBaronRougeNormal-M9DB.ttf') format('truetype'); /* Format WOFF */
+    /* Ajoutez d'autres formats de police si nécessaire */
+    font-weight: normal; /* Poids de la police (normal, bold, etc.) */
+    font-style: normal; /* Style de la police (normal, italic, oblique) */
+}
+
+/*background*/
+html{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #fff 0%, rgba(225, 5, 34, 0) 70%),
+                linear-gradient(135deg, #fff 10%, rgba(49, 5, 209, 0) 80%),
+                linear-gradient(225deg, rgb(98, 204, 253) 10%, rgba(10, 219, 216, 0) 80%),
+                linear-gradient(315deg, #fff 100%, rgba(9, 245, 5, 0) 70%);
+    background-attachment: fixed;
+}
+
+ /*Menu part*/
+ menu{
+    list-style-type: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 1px;
+ }
+
+.itemList{
+    display: flex;
+    position: absolute ;
+    right:30px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.MenuItem{
+    padding: 1vw;
+    color: black;
+    font-size: max(1.3vw, 12px);
+ }
+
+ .MenuItem:hover{
+    background-color: rgb(43, 69, 124);
+    color: #fff;
+    border-radius: 10%;
+ }
+
+
+/*containt panel*/
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content:left;
+    align-items:baseline; 
+    flex-wrap: wrap;
+    padding: max(35vh,100px) 5vw 0;     
+}
+
+.presentation{  
+    width: min(45vw ,50%);
+    text-align: justify;
+    left: 10%;
+    top: 30%;
+    min-height: min(100vh,600px);
+    
+}
+
+.dot {
+    height: max(1vw,10px);
+    width:  max(1vw,10px);
+    background-color: rgb(43, 69, 124);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.name{
+    font-weight: bolder;
+    font-size: max(3.5vw, 25px) ;
+}
+
+.hello{
+    font-size: max(2.5vw, 20px);
+    font-weight: bold;
+}
+
+.mainText{
+    color: rgb(19, 19, 19);
+    font-size: max(1.3vw,12px);
+    padding-top: 10px;
+ }  
+
+/*foot note */
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the footer horizontally */
+    width: 80%; /* Adjust the width as needed */
+    text-align: center;
+}
+
+.bottomText{
+    font-size: max(1.3vw,12px);
+    text-align: justify;
+    margin-bottom: 20px; 
+    width: 75%;
+}
+
+.IconLinkedin{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    padding-bottom: 20px;
+  }
