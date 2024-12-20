@@ -1,0 +1,34 @@
+/*Menu part*/
+menu{
+    list-style-type: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 1px;
+ }
+
+.itemList{
+    display: flex;
+    position: absolute ;
+    right:30px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.MenuItem{
+    padding: 1vw;
+    color: black;
+    font-size: max(1.3vw, 12px);
+ }
+
+ .MenuItem:hover{
+    background-color: rgb(43, 69, 124);
+    color: #fff;
+    border-radius: 10%;
+ }

@@ -21,49 +21,27 @@ html{
     background-attachment: fixed;
 }
 
-/*containt panel*/
-body{
-    font-family: 'Montserrat', sans-serif;
-}
 
-.container{
+footer{
     display: flex;
-    justify-content:left;
-    align-items:baseline; 
-    flex-wrap: wrap;
-    padding: max(35vh,100px) 5vw 0;     
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the footer horizontally */
+    width: 80%; /* Adjust the width as needed */
+    text-align: center;
 }
 
-.presentation{  
-    width: min(45vw ,50%);
-    text-align: justify;
-    left: 10%;
-    top: 30%;
-    min-height: min(100vh,600px);
-    
-}
-
-.dot {
-    height: max(1vw,10px);
-    width:  max(1vw,10px);
-    background-color: rgb(43, 69, 124);
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-.name{
-    font-weight: bolder;
-    font-size: max(3.5vw, 25px) ;
-}
-
-.hello{
-    font-size: max(2.5vw, 20px);
-    font-weight: bold;
-}
-
-.mainText{
-    color: rgb(19, 19, 19);
+.bottomText{
     font-size: max(1.3vw,12px);
-    padding-top: 10px;
- }  
+    text-align: justify;
+    margin-bottom: 20px; 
+    width: 75%;
+}
 
+.IconLinkedin{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    padding-bottom: 20px;
+  }
