@@ -7,65 +7,86 @@
 
 
 <body>
-
     <menu>
         <div class="title">
-            <a href="/Index.html"> 
-                <bold>JONATHAN</bold> 
-                <div class="dot"></div> 
+            <a href="/Index.html">
+                <bold>JONATHAN</bold>
+                <div class="dot"></div>
                 <div class="home"></div>
             </a>
         </div>
-     
-
 
         <div class="itemList">
             <a class="MenuItem" href="/Projects.html">Projects</a>
             <div class="MenuItem">Contact</div>
             <a class="MenuItem" href="/About.html">About Me</a>
         </div>
-     
+
     </menu>
 
+    <div class="container">
+        <main class="main-selection">
+            <!-- Selection part -->
+            <section class="section">
+                <div class="section__header">
+                    <span class="section__title">JONATHAN</span>
+                    <span class="section__at">@</span>
+                    <span class="section__title">Universities</span>
+                </div>
+                <section class="section">
+                    <div class="section__list">
+                        <div class="section__item">École de Technologie Supérieur (ETS)</div>
+                        <div class="section__item">Concordia University</div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        
+        <main class="main-info">
+            <!-- Info part -->
+            <section class="section">
 
-<div class="school">
-    <div class="selection">
-        <div class="subTitle">
-            <div class="text">
-                JONATHAN
-            </div>
-            <div class="at">@</div>
-            <div class="text">
-                Universities
-            </div>
-
-        </div>
-    
-        <div class="Uni_list">
-            <div class="universities">École de Technologie Supérieur (ETS)</div>
-            <div class="universities">Concordia University</div>
-        </div>
+            </section>
+            <section class="section">
+                <div class="section__header">
+                    <span class="section__title">JONATHAN</span>
+                    <span class="section__at">@</span>
+                    <span class="section__title">Internships</span>
+                </div>
+                <div class="section__list">
+                    <div class="section__item">Pratt & Whitney</div>
+                </div>
+            </section>
+        </main>
     </div>
-    
-    <div class="selection">
-        <div class="subTitle">
-            <div class="text">
-                JONATHAN
-            </div>
-            <div class="at">@</div>
-            <div class="text">
-                Internships
-            </div>
 
-        </div>
-    
-        <div class="Uni_list">
-            <div class="universities">Pratt & Whitney</div>
-        </div>
-    </div>
+<script>
 
-</div>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all section items
+    const sectionItems = document.querySelectorAll('.section__item');
     
+    // Add click event listener to each item
+    sectionItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Check if this item is already active
+            const isCurrentlyActive = this.classList.contains('section__item--active');
+            
+            // Remove active class from all items
+            document.querySelectorAll('.section__item').forEach(otherItem => {
+                otherItem.classList.remove('section__item--active');
+                otherItem.classList.add('section__item--black');
+            });
+            
+            // Only add active class if the item wasn't previously active
+            if (!isCurrentlyActive) {
+                this.classList.add('section__item--active');
+            }
+        });
+    });
+});
+
+</script>
 
 </body>
 

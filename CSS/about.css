@@ -1,151 +1,176 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/* Font imports */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
 @font-face {
-    font-family: 'The Binary Baron'; /* Nom de votre police */
-    src: url('/Other/CfBaronRougeNormal-M9DB.ttf') format('truetype'); /* Format WOFF */
-    /* Ajoutez d'autres formats de police si nécessaire */
-    font-weight: normal; /* Poids de la police (normal, bold, etc.) */
-    font-style: normal; /* Style de la police (normal, italic, oblique) */
+  font-family: "The Binary Baron";
+  src: url("/Other/CfBaronRougeNormal-M9DB.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-/*background*/
-html{
-    background: linear-gradient(45deg, #fff 0%, rgba(225, 5, 34, 0) 70%),
-                linear-gradient(135deg, #fff 10%, rgba(49, 5, 209, 0) 80%),
-                linear-gradient(225deg, rgb(98, 204, 253) 10%, rgba(10, 219, 216, 0) 80%),
-                linear-gradient(315deg, #fff 100%, rgba(9, 245, 5, 0) 70%);
-    background-attachment: fixed;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
- /*Menu part*/
- menu{
-    list-style-type: none;
-    position:absolute;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    display:flex;
-    padding: 1px;
- }
-
- menu:hover .home {
-    opacity: 1;
-    max-height: 200px;
-    overflow: hidden;
-    transition: opacity 0.5s ease, max-height 0.5s ease;
+html {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #fff 0%, rgba(225, 5, 34, 0) 70%),
+    linear-gradient(135deg, #fff 10%, rgba(49, 5, 209, 0) 80%),
+    linear-gradient(225deg, rgb(98, 204, 253) 10%, rgba(10, 219, 216, 0) 80%),
+    linear-gradient(315deg, #fff 100%, rgba(9, 245, 5, 0) 70%);
+  background-attachment: fixed;
 }
 
-.itemList{
-    display: flex;
-    position: absolute ;
-    right:30px;
-}
- 
-a{
-    text-decoration: none;
-    color: black;
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
- .title{   
-    padding: 1vw 3vw;
-    font-weight: bolder;
-    font-size: max(2.5vw, 17px);
-    display: flex;
+/* Navigation styles */
+/*Menu part*/
+menu {
+  list-style-type: none;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  margin: 10px;
 }
 
-.home{
-    opacity: 0;
-    max-height: 0;
-    position: relative;
-    display: inline;
+menu:hover .home {
+  opacity: 1;
+  max-height: 200px;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.itemList {
+  display: flex;
+  position: absolute;
+  right: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.title {
+  padding: 1vw 3vw;
+  font-weight: bolder;
+  font-size: max(2.5vw, 17px);
+  display: flex;
+}
+
+.home {
+  opacity: 0;
+  max-height: 0;
+  position: relative;
+  display: inline;
 }
 
 .dot {
-    height: 1vw;
-    width: 1vw;
-    background-color: rgb(43, 69, 124);
-    border-radius: 50%;
-    display: inline-block;
+  height: 1vw;
+  width: 1vw;
+  background-color: rgb(43, 69, 124);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.MenuItem {
+  padding: 1vw;
+  color: black;
+  font-size: max(1.3vw, 12px);
+}
+
+.MenuItem:hover {
+  background-color: rgb(43, 69, 124);
+  color: #fff;
+  border-radius: 10%;
+}
+
+/* Main content styles */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.section {
+  width: 100%;
+  max-width: 600px;
+}
+
+.section__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 0;
+}
+
+.section__title {
+  font-size: clamp(17px, 2.5vw, 32px);
+  font-weight: 700;
+}
+
+.section__at {
+  color: rgb(43, 69, 124);
+  display: inline-block;
+  font-size: max(2.5vw, 17px);
+  font-weight: bolder;
+}
+
+.section__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section__item {
+  width: 100%;
+  max-width: 450px;
+  padding: 1.25rem;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.section__item:hover{
+  background-color: rgb(250, 194, 39);
+  color: white;
+}
+
+.section__item--active{
+    background-color: rgb(250, 194, 39);
+    color: white;
   }
 
-.MenuItem{
-    padding: 1vw;
-    color: black;
-    font-size: max(1.3vw, 12px);
- }
+  .section__item--active:hover{
+    background-color: rgb(0, 4, 255);
+    color: white;
+  }
 
- .MenuItem:hover{
-    background-color: rgb(43, 69, 124);
-    color: #fff;
-    border-radius: 10%;
- }
-
-/*containt panel*/
-
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-
-.subTitle{
+.container {
     display: flex;
-    justify-content:center;
-    padding: 50px 5vw 0;
+    gap: 2vw;  /* Space between selection and info */
 }
 
- .universities{
-    margin-top: 0;
-    text-align:center;
-    padding:20px ;
-    margin: 20px;
-    width: 450px;
- }
-
- .universities:hover{
-    background-color: rgb(250, 194, 39);
-    border-radius: 10px;
-    color: #fff;
-    
- }
-
-
-
-.at{
-color: rgb(43, 69, 124);
-display: inline-block;
-font-size: max(2.5vw, 17px);
-font-weight: bolder;   
+.main-selection {
+    /* Styles for the selection part */
+    flex: 1;  /* Takes up equal space */
 }
 
-.text{
-    font-weight: bolder;
-    font-size: max(2.5vw, 17px);
-}
-
-
-.school{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-wrap: wrap;
-}
-
-.info{
-    max-width: 400px;
-    text-align: center;
-    background-color: blueviolet;
-    border-radius: 50px;
-    padding: 15px;
-    margin: 20px;
-    
-}
-
-.selection{
-height: 25vh;
-}
-
-.Uni_list {
-    display: flex;
-    justify-content: center; 
-    flex-direction: column; 
-    align-items: center; 
+.main-info {
+    /* Styles for the info part */
+    flex: 1;  /* Takes up equal space */
 }
