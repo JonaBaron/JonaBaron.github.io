@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="/CSS/about.css">
-<script src="main.js"></script>
-
-<title>The Binary Baron</title>
-
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Binary Baron</title>
+    <link rel="stylesheet" href="/CSS/about.css">
+    <script src="main.js" defer></script>
+</head>
 <body>
     <menu>
         <div class="title">
             <a href="/Index.html">
-                <bold>JONATHAN</bold>
+                <strong>JONATHAN</strong>
                 <div class="dot"></div>
                 <div class="home"></div>
             </a>
@@ -21,24 +22,20 @@
             <div class="MenuItem">Contact</div>
             <a class="MenuItem" href="/About.html">About Me</a>
         </div>
-
     </menu>
 
     <div class="container">
         <main class="main-selection">
-            <!-- Selection part -->
             <section class="section">
                 <div class="section__header">
                     <span class="section__title">JONATHAN</span>
                     <span class="section__at">@</span>
                     <span class="section__title">UNIVERSITY</span>
                 </div>
-                <section class="section">
-                    <div class="section__list">
-                        <div class="section__item">École de Technologie Supérieur (ETS)</div>
-                        <div class="section__item">Concordia University</div>
-                    </div>
-                </section>
+                <div class="section__list">
+                    <div class="section__item">École de Technologie Supérieur (ETS)</div>
+                    <div class="section__item">Concordia University</div>
+                </div>
 
                 <div class="section__header">
                     <span class="section__title">JONATHAN</span>
@@ -48,49 +45,42 @@
                 <div class="section__list">
                     <div class="section__item">Pratt & Whitney</div>
                 </div>
-
             </section>
         </main>
-        
-        <main class="main-info">
-            <!-- Info part -->
-            <section class="section">
-sssss
-            </section>
 
+        <main class="main-info">
+            <section class="section">
+                <h1>Technological Academic Path</h1>
+            </section>
         </main>
     </div>
 
-<script>
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all section items
-    const sectionItems = document.querySelectorAll('.section__item');
-    
-    // Add click event listener to each item
-    sectionItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Check if this item is already active
-            const isCurrentlyActive = this.classList.contains('section__item--active');
-            
-            // Remove active class from all items
-            document.querySelectorAll('.section__item').forEach(otherItem => {
-                otherItem.classList.remove('section__item--active');
-                otherItem.classList.add('section__item--black');
-            });
-            
-            // Only add active class if the item wasn't previously active
-            if (!isCurrentlyActive) {
-                this.classList.add('section__item--active');
-            }
-        });
+    <main class="main-info">
+        <section class="section">
+            <h1>Technological Academic Path</h1>
+        </section>
+    </main>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const sectionItems = document.querySelectorAll('.section__item');
+
+  sectionItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const isActive = item.classList.contains('section__item--active');
+
+      sectionItems.forEach(otherItem => {
+        otherItem.classList.remove('section__item--active');
+      });
+
+      if (!isActive) {
+        item.classList.add('section__item--active');
+      }
     });
 });
+});
 
-</script>
-
+    </script>
 </body>
-
-
-
 </html>
