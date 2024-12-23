@@ -1,90 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Binary Baron</title>
-    <link rel="stylesheet" href="/CSS/about.css">
+    <link rel="stylesheet" href="/CSS/about.css" />
     <script src="main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <menu>
-        <div class="title">
-            <a href="/Index.html">
-                <strong>JONATHAN</strong>
-                <div class="dot"></div>
-                <div class="home"></div>
-            </a>
-        </div>
+      <div class="title">
+        <a href="/Index.html">
+          <strong>JONATHAN</strong>
+          <div class="dot"></div>
+          <div class="home"></div>
+        </a>
+      </div>
 
-        <div class="itemList">
-            <a class="MenuItem" href="/Projects.html">Projects</a>
-            <div class="MenuItem">Contact</div>
-            <a class="MenuItem" href="/About.html">About Me</a>
-        </div>
+      <div class="itemList">
+        <a class="MenuItem" href="/Projects.html">Projects</a>
+        <div class="MenuItem">Contact</div>
+        <a class="MenuItem" href="/About.html">About Me</a>
+      </div>
     </menu>
 
     <div class="container">
-        <main class="main-selection">
-            <section class="section">
-                <div class="section__header">
-                    <span class="section__title">JONATHAN</span>
-                    <span class="section__at">@</span>
-                    <span class="section__title">UNIVERSITY</span>
-                </div>
-                <div class="section__list">
-                    <div class="section__item">École de Technologie Supérieur (ETS)</div>
-                    <div class="section__item">Concordia University</div>
-                </div>
+      <main class="main-selection">
+        <section class="section">
+          <div class="section__header">
+            <span class="section__title">JONATHAN</span>
+            <span class="section__at">@</span>
+            <span class="section__title">UNIVERSITY</span>
+          </div>
+          <div class="section__list">
+            <div class="section__item">
+              École de Technologie Supérieur (ETS)
+            </div>
+            <div class="section__item">Concordia University</div>
+          </div>
 
-                <div class="section__header">
-                    <span class="section__title">JONATHAN</span>
-                    <span class="section__at">@</span>
-                    <span class="section__title">INTERNSHIPS</span>
-                </div>
-                <div class="section__list">
-                    <div class="section__item">Pratt & Whitney</div>
-                </div>
-            </section>
-        </main>
+          <div class="section__header">
+            <span class="section__title">JONATHAN</span>
+            <span class="section__at">@</span>
+            <span class="section__title">INTERNSHIPS</span>
+          </div>
+          <div class="section__list">
+            <div class="section__item">Pratt & Whitney</div>
+          </div>
+        </section>
+      </main>
 
-        <main class="main-info">
-            <br class="section">
-            <h1>Technological Academic Path</h1>
-                The École de technologie supérieure (ÉTS) offers a University Pathway in Technology, 
-                a program tailored for students with a strong interest in science and technology who 
-                aim to transition from theory to practical applications. This program serves as a 
-                preparatory step for ÉTS's bachelor's degrees, focusing on hands-on experience in a
-                cutting-edge technological environment.
-            </section>
-        </main>
+      <main class="main-info">
+        <h1>Technological Academic Path</h1>
+        <section class="section">
+          The École de technologie supérieure (ÉTS) offers a University Pathway
+          in Technology, designed for students passionate about science and
+          technology, providing a practical foundation for bachelor's degrees.
+          The program emphasizes hands-on experience in a high-tech environment
+          and prepares students for the real-world application of their skills.
+          <br /><br />
+          ÉTS focuses on cooperative education and is involved in research in
+          energy, environment, aerospace, IT, microelectronics, and health
+          technologies. Located in Montreal, it houses the Centech technology
+          business accelerator and student technical clubs engaged in
+          international competitions. The university fosters innovation with
+          students clubs
+          <br /><br />
+          ÉTS ranks
+          <a
+            href="https://www.etsmtl.ca/en/about-ets/presentation"
+            style="color: white"
+            ><u>fourth</u></a
+          >
+          among Canadian universities for <strong>research intensity</strong>.
+        </section>
+      </main>
     </div>
 
-
-    <main class="main-info">
-        <section class="section">
-        </section>
+    <div class="container">
+    <main class="Curriculum">
+      <h1>
+        Curriculum followed
+      </h1>
+      <section class="section"></section>
     </main>
-
+    </div>
     <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const sectionItems = document.querySelectorAll('.section__item');
+      document.addEventListener("DOMContentLoaded", () => {
+        const sectionItems = document.querySelectorAll(".section__item");
 
-  sectionItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const isActive = item.classList.contains('section__item--active');
+        sectionItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            const isActive = item.classList.contains("section__item--active");
 
-      sectionItems.forEach(otherItem => {
-        otherItem.classList.remove('section__item--active');
+            sectionItems.forEach((otherItem) => {
+              otherItem.classList.remove("section__item--active");
+            });
+
+            if (!isActive) {
+              item.classList.add("section__item--active");
+            }
+          });
+        });
       });
-
-      if (!isActive) {
-        item.classList.add('section__item--active');
-      }
-    });
-});
-});
-
     </script>
-</body>
+  </body>
 </html>
