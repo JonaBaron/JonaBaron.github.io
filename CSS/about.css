@@ -124,7 +124,7 @@ text-align: left;
 .Curriculum {
   background-color: #97c6e28e;
   border-radius: 15px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding: 2rem;
 }
 
@@ -180,7 +180,7 @@ text-align: left;
 }
 
 .section__item--active:hover {
-  background-color: rgb(0, 4, 255);
+  background-color: rgb(43, 69, 124);
   color: white;
 }
 
