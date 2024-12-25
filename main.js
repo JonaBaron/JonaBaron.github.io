@@ -39,8 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const sectionItems = document.querySelectorAll(".section__item");
   const textItem = document.querySelector(".main-info");
 
-
-
   // Define the text content for each section item
   const itemTexts = {
     "École de Technologie Supérieur (ETS)": `
