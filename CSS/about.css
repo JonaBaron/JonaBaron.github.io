@@ -184,6 +184,10 @@ text-align: left;
   color: white;
 }
 
+ul{
+  padding-left:15px;
+}
+
 /* Add this media query */
 @media (max-width: 900px) {
   .container,

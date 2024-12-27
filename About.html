@@ -50,7 +50,7 @@
         </section>
       </main>
 
-      <main class="main-info">dfdddd</main>
+      <main class="main-info"></main>
     </div>
 
     <div class="container">
@@ -61,6 +61,44 @@
     </div>
 
     <script>
+      const myText = `
+      <h2 style="text-align:center;">About me</h2>
+      <h4>
+      <ul>
+        <li>C/C++</li>
+        <li>Java</li>
+        <li>Bash command</li>
+        <li>ARM V6 assembly</li>
+        
+        <li>VHDL</li>
+          <ul>
+            <li>Modelsim</li>
+            <li>Xilinx Vivado</li>
+            <ul>
+              <li>Simulation</li>
+              <li>Synthesis</li>
+            </ul>
+          </ul>
+        <li>PL-SQL</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Node.js</li>
+        <li>Latex</li>
+        <li>PostgreSQL</li>
+        <li>Apache web server</li>
+        <li>Allan-Bradley plc</li>
+        <li>Oracle VM Virtual Box</li>
+        <li>SolidWorks</li>
+        <li>Git</li>
+        <li>Altium Designer</li>
+      </ul>
+      </h4>
+
+        `;
+
+      document.querySelector(".main-info").innerHTML = myText;
+
       document.addEventListener("DOMContentLoaded", () => {
         const sectionItems = document.querySelectorAll(".section__item");
         const textItem = document.querySelector(".main-info");
@@ -129,7 +167,7 @@
               textItem.innerHTML = itemTexts[item.textContent.trim()];
             } else {
               // If it was active, clear the text
-              textItem.innerHTML = "Information coming soon...";
+              textItem.innerHTML = myText;
             }
           });
         });
