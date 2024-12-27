@@ -24,7 +24,7 @@
       </div>
     </menu>
 
-    <div class="container">  
+    <div class="container">
       <main class="main-selection">
         <section class="section">
           <div class="section__header">
@@ -50,30 +50,25 @@
         </section>
       </main>
 
-      <main class="main-info">
-
-      </main>
+      <main class="main-info">dfdddd</main>
     </div>
 
     <div class="container">
-    <main class="Curriculum">
-      <h1>
-        Curriculum followed
-      </h1>
-      <section class="section"></section>
-    </main>
+      <main class="Curriculum">
+        <h1>Curriculum followed</h1>
+        <section class="section"></section>
+      </main>
     </div>
 
     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sectionItems = document.querySelectorAll(".section__item");
+        const textItem = document.querySelector(".main-info");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const sectionItems = document.querySelectorAll(".section__item");
-  const textItem = document.querySelector(".main-info");
-
-  // Define the text content for each section item
-  const itemTexts = {
-    "École de Technologie Supérieur (ETS)": `
-        <h1  style="font-size: max(20px, 2vw)">Technological Academic Path</h1>
+        // Define the text content for each section item
+        const itemTexts = {
+          "École de Technologie Supérieur (ETS)": `
+        <h2 >Technological Academic Path</h2>
         <section class="section">
           The École de technologie supérieure (ÉTS) offers a University Pathway
           in Technology, designed for students passionate about science and
@@ -97,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
           among Canadian universities for <strong>research intensity</strong>.
         </section>
     `,
-    "Concordia University": `
+          "Concordia University": `
       <h2>Concordia University</h2>
       <p>Computer Science Courses</p>
       <p>2018 - 2020</p>
@@ -107,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <li>Participated in coding competitions</li>
       </ul>
     `,
-    "Pratt & Whitney": `
+          "Pratt & Whitney": `
       <h2>Pratt & Whitney</h2>
       <p>Software Engineering Intern</p>
       <p>Summer 2023</p>
@@ -116,32 +111,29 @@ document.addEventListener("DOMContentLoaded", () => {
         <li>Collaborated with cross-functional engineering teams</li>
         <li>Implemented data analysis solutions</li>
       </ul>
-    `
-  };
+    `,
+        };
 
-  sectionItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      const isActive = item.classList.contains("section__item--active");
-      
+        sectionItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            const isActive = item.classList.contains("section__item--active");
 
+            // Remove active class from all items
+            sectionItems.forEach((otherItem) => {
+              otherItem.classList.remove("section__item--active");
+            });
 
-      // Remove active class from all items
-      sectionItems.forEach((otherItem) => {
-        otherItem.classList.remove("section__item--active");
+            // If the clicked item wasn't active, make it active and show its text
+            if (!isActive) {
+              item.classList.add("section__item--active");
+              textItem.innerHTML = itemTexts[item.textContent.trim()];
+            } else {
+              // If it was active, clear the text
+              textItem.innerHTML = "Information coming soon...";
+            }
+          });
+        });
       });
-
-      // If the clicked item wasn't active, make it active and show its text
-      if (!isActive) {
-        item.classList.add("section__item--active");
-        textItem.innerHTML = itemTexts[item.textContent.trim()];
-      } else {
-        // If it was active, clear the text
-        textItem.innerHTML = "Information coming soon...";
-      }
-    });
-  });
-});
     </script>
-
   </body>
 </html>

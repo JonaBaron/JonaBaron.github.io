@@ -8,6 +8,14 @@
     font-style: normal; /* Style de la police (normal, italic, oblique) */
 }
 
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 /*background*/
 html{
     display:flex;
@@ -29,7 +37,7 @@ html{
     left: 0;
     width: 100%;
     display:flex;
-    padding: 1px;
+    margin: 10px;
  }
 
  menu:hover .home {
@@ -81,7 +89,7 @@ a{
  .MenuItem:hover{
     background-color: rgb(43, 69, 124);
     color: #fff;
-    border-radius: 10%;
+    border-radius: 15px;
  }
 
  /* list of activities*/

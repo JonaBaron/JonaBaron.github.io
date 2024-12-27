@@ -8,6 +8,14 @@
     <title>Jonathan Mehmannavaz</title>
 </head>
 
+<menu>
+    <div class="itemList">
+    <a class="MenuItem" href="/Projects.html">Projects</a>
+    <div class="MenuItem">Contact</div>
+    <a class="MenuItem" href="/About.html">About Me</a>
+    </div>
+</menu>
+
 <body>
     <div class="container">
         <div class="presentation">
@@ -22,27 +30,6 @@
         </div>
     </div>
 
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('HeaderIndex.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.body.insertAdjacentHTML('beforeend', data);
-                })
-                .catch(error => console.error('Error loading footer:', error));
-
-                fetch('FooterIndex.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.body.insertAdjacentHTML('beforeend', data);
-                })
-                .catch(error => console.error('Error loading footer:', error));
-
-        });
-
-
-    </script>
 
 </body>
 </html>

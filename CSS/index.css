@@ -8,6 +8,13 @@
     font-style: normal; /* Style de la police (normal, italic, oblique) */
 }
 
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 /*background*/
 html{
     display: flex;
@@ -20,6 +27,40 @@ html{
                 linear-gradient(315deg, #fff 100%, rgba(9, 245, 5, 0) 70%);
     background-attachment: fixed;
 }
+
+/*Menu part*/
+menu{
+    list-style-type: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    margin: 10px;
+ }
+
+.itemList{
+    display: flex;
+    position: absolute ;
+    right:30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.MenuItem{
+    padding: 1vw;
+    color: black;
+    font-size: max(1.3vw, 12px);
+ }
+
+ .MenuItem:hover{
+    background-color: rgb(43, 69, 124);
+    color: #fff;
+    border-radius: 20px;
+ }
+
 
 /*containt panel*/
 body{
