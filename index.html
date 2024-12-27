@@ -33,26 +33,36 @@
     </div>
 
     <script>
- const textSection = document.querySelector(".name");
-const phrases = [
-    'A future engineer',
-    'A student',
-    'A programmer',
-    'A geek',
-    'A problem solver',
-    'A tech enthusiast',
-    'An innovator'
-];
+      const textSection = document.querySelector(".name");
+      const phrases = [
+        "An intern",
+        "A future engineer",
+        "A student",
+        "A programmer",
+        "A geek",
+        "A problem solver",
+        "A tech enthusiast",
+        "An innovator",
+      ];
 
-phrases.forEach((phrase, index) => {
-    setTimeout(function(){
-        textSection.innerHTML = ` ${phrase}<div class="dot"></div>`;
-    }, (index + 1) * 3000);
+      function startAnimation() {
 
-textSection.innerHTML = '<strong>JONATHAN</strong><div class="dot"></div>';
+        setTimeout(() => {
+          phrases.forEach((phrase, index) => {
+            setTimeout(function () {
+              textSection.innerHTML = `${phrase}<div class="dot"></div>`;
+            }, index * 3000);
+          });
 
-});
+          setTimeout(function () {
+            textSection.innerHTML = `<strong>JONATHAN</strong><div class="dot"></div>`;
+            // Restart the animation
+            startAnimation();
+          }, phrases.length * 5000);
+        }, 3000);
+      }
 
+      startAnimation();
     </script>
   </body>
 </html>
