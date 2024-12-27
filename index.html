@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/index.css" />
     <title>Jonathan Mehmannavaz</title>
-</head>
+  </head>
 
-<menu>
+  <menu>
     <div class="itemList">
-    <a class="MenuItem" href="/Projects.html">Projects</a>
-    <div class="MenuItem">Contact</div>
-    <a class="MenuItem" href="/About.html">About Me</a>
+      <a class="MenuItem" href="/Projects.html">Projects</a>
+      <div class="MenuItem">Contact</div>
+      <a class="MenuItem" href="/About.html">About Me</a>
     </div>
-</menu>
+  </menu>
 
-<body>
+  <body>
     <div class="container">
-        <div class="presentation">
-            <div class="hello">Hello, it's me</div>
-            <div class="name"><strong>JONATHAN</strong><div class="dot"></div></div>
-            <div class="mainText">
-                A dynamic and responsible computer engineering student
-                with a passion for new challenges and learning the latest technologies.
-                Overall, dedicated to pursuing a career in the field of computer engineering
-                and making a positive impact on the world through technology.
-            </div>
+      <div class="presentation">
+        <div class="hello">Hello, it's me</div>
+        <div class="name">
+          <strong>JONATHAN</strong>
+          <div class="dot"></div>
         </div>
+        <div class="mainText">
+          A dynamic and responsible computer engineering student with a passion
+          for new challenges and learning the latest technologies. Overall,
+          dedicated to pursuing a career in the field of computer engineering
+          and making a positive impact on the world through technology.
+        </div>
+      </div>
     </div>
 
+    <script>
+ const textSection = document.querySelector(".name");
+const phrases = [
+    'A future engineer',
+    'A student',
+    'A programmer',
+    'A geek',
+    'A problem solver',
+    'A tech enthusiast',
+    'An innovator'
+];
 
-</body>
+phrases.forEach((phrase, index) => {
+    setTimeout(function(){
+        textSection.innerHTML = ` ${phrase}<div class="dot"></div>`;
+    }, (index + 1) * 3000);
+
+textSection.innerHTML = '<strong>JONATHAN</strong><div class="dot"></div>';
+
+});
+
+    </script>
+  </body>
 </html>
