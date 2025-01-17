@@ -34,7 +34,6 @@ I'm a Computer Engineering student at Concordia University with experience in va
 - Contact information
 
 ## 📫 Connect With Me
-- Email: mehmannavazjonathan@gmail.com
 - LinkedIn: [Jonathan Mehmannavaz](https://www.linkedin.com/in/jonathan-mehmannavaz/)
 - GitHub: [JonaBaron](https://github.com/JonaBaron)
 
