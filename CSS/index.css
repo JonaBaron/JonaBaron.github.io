@@ -93,6 +93,7 @@ body{
   }
 
 .name{
+    text-align:left;
     font-weight: bolder;
     font-size: max(3.5vw, 25px) ;
 }
