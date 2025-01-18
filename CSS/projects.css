@@ -89,7 +89,7 @@ a{
  .MenuItem:hover{
     background-color: rgb(43, 69, 124);
     color: #fff;
-    border-radius: 15px;
+    border-radius: min(20px, 1vw);
  }
 
  /* list of activities*/
