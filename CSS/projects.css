@@ -117,7 +117,7 @@ a{
 
 
 .projects {
-  background-color: rgb(43, 69, 124);
+  background-color: #97c6e28e;
   border-radius: 10px;
   font-size: clamp(14px, 2vw, 18px);
   padding: 2rem;
