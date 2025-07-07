@@ -122,21 +122,19 @@ body{
  }  
 
  .social-links {
-    margin-top: 15px;
     display: flex;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
 }
 
 .social-links a {
     display: inline-block;
-    width: 65px;
-    height: 65px;
+    height: 30px;
 }
 
 .social-links img {
-    width: 65px !important;
-    height: 65px !important;
+    width: 75px !important;
+    height: 75px !important;
     display: block;
     object-fit: contain;
 }
