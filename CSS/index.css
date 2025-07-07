@@ -76,18 +76,24 @@ body{
 }
 
 .presentation{  
-    width: min(45vw ,50%);
+    width: min(45vw, 50%);
     text-align: justify;
-    min-height: min(100vh,600px);
-    margin-top: max(35vh,100px);
+    height: auto;
+    margin-top: 0; /* Removed large margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
 .container img {
-    max-width: 45%;              
-    height: auto;              
+    max-width: 45%;
+    max-height: 60vh; /* Limit image height */
+    width: auto;
+    height: auto;
     margin: 0;    
-    padding:0;   
+    padding: 0;
+    object-fit: cover;
 }
 
 .dot {
@@ -115,3 +121,22 @@ body{
     padding-top: 10px;
  }  
 
+ .social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+}
+
+.social-links img {
+    width: 65px !important;
+    height: 65px !important;
+    display: block;
+    object-fit: contain;
+}
