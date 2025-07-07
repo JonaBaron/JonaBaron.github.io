@@ -28,25 +28,241 @@
     </menu>
 
     <div class="container">
-
-        <div class="achievement">Achievement</div>
-
-        <div class="projects"> Project 1</div>
-        <div class="projects"> Project 2</div>
-        <div class="projects"> Project 3</div>
-        <div class="projects"> Project 4</div>
-        <div class="projects"> Project 5</div>
-        <div class="projects"> Project 6</div>
-        <div class="projects"> Project 7</div>
-        <div class="projects"> Project 8</div>
-
+        <div class="achievement">Achievements</div>
+        <div class="projects" data-project="crane">Remote control tower crane</div>
+        <div class="projects" data-project="project2">AI-Powered Web Application</div>
+        <div class="projects" data-project="project3">IoT Smart Home System</div>
+        <div class="projects" data-project="project4">Mobile Game Development</div>
+        <div class="projects" data-project="project5">Data Visualization Dashboard</div>
+        <div class="projects" data-project="project6">E-commerce Platform</div>
+        <div class="projects" data-project="project7">Machine Learning Model</div>
+        <div class="projects" data-project="project8">Blockchain Application</div>
     </div>
 
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Project Title</h2>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent">
+                    <!-- Project content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        // Project data
+        const projectData = {
+            crane: {
+                title: "Remote Control Tower Crane",
+                description: "An innovative remote-controlled tower crane system designed for enhanced safety and precision in construction operations.",
+                overview: "This project involved developing a comprehensive remote control system for tower cranes, allowing operators to work from a safe distance while maintaining full control and visibility of crane operations.",
+                technologies: ["Arduino", "Raspberry Pi", "Wireless Communication", "Computer Vision", "Python", "C++"],
+                features: [
+                    "Real-time video feedback with multiple camera angles",
+                    "Precise load positioning with GPS integration",
+                    "Emergency stop systems and safety protocols",
+                    "Weather condition monitoring",
+                    "Remote diagnostics and maintenance alerts"
+                ],
+                challenges: "The main challenges included ensuring reliable wireless communication over long distances, implementing fail-safe mechanisms, and creating an intuitive control interface that maintains the precision required for construction work.",
+                outcome: "Successfully deployed on three construction sites, resulting in 40% reduction in operator risk and 25% improvement in operational efficiency."
+            },
+            project2: {
+                title: "AI-Powered Web Application",
+                description: "A sophisticated web application leveraging artificial intelligence to provide intelligent recommendations and automated decision-making capabilities.",
+                overview: "Built a full-stack web application that integrates machine learning algorithms to analyze user behavior and provide personalized recommendations in real-time.",
+                technologies: ["React", "Node.js", "TensorFlow", "MongoDB", "Express.js", "Python"],
+                features: [
+                    "Real-time user behavior analysis",
+                    "Personalized recommendation engine",
+                    "Automated content moderation",
+                    "Predictive analytics dashboard",
+                    "RESTful API with authentication"
+                ],
+                challenges: "Implementing real-time ML inference while maintaining low latency, handling large datasets efficiently, and ensuring model accuracy across diverse user segments.",
+                outcome: "Achieved 95% user satisfaction rate and 60% increase in user engagement through personalized experiences."
+            },
+            project3: {
+                title: "IoT Smart Home System",
+                description: "A comprehensive Internet of Things solution for home automation, featuring smart sensors, automated controls, and energy management.",
+                overview: "Designed and implemented a complete smart home ecosystem that monitors environmental conditions, automates lighting and climate control, and optimizes energy consumption.",
+                technologies: ["ESP32", "MQTT", "Node-RED", "InfluxDB", "Grafana", "Mobile App"],
+                features: [
+                    "Automated lighting based on occupancy and natural light",
+                    "Climate control with learning algorithms",
+                    "Energy consumption monitoring and optimization",
+                    "Security system with motion detection",
+                    "Mobile app for remote control and monitoring"
+                ],
+                challenges: "Ensuring reliable communication between multiple IoT devices, implementing robust security protocols, and creating an energy-efficient system that operates 24/7.",
+                outcome: "Reduced household energy consumption by 30% and provided seamless automation that adapts to family routines."
+            },
+            project4: {
+                title: "Mobile Game Development",
+                description: "An engaging mobile game featuring advanced graphics, multiplayer capabilities, and social integration.",
+                overview: "Developed a cross-platform mobile game with innovative gameplay mechanics, stunning visuals, and seamless multiplayer functionality.",
+                technologies: ["Unity", "C#", "Firebase", "Photon", "Blender", "Git"],
+                features: [
+                    "Cross-platform multiplayer gameplay",
+                    "Advanced 3D graphics and animations",
+                    "Social features and leaderboards",
+                    "In-app purchases and monetization",
+                    "Cloud save functionality"
+                ],
+                challenges: "Optimizing performance across different mobile devices, implementing fair multiplayer mechanics, and creating engaging gameplay that keeps players returning.",
+                outcome: "Launched successfully on both iOS and Android with over 100,000 downloads in the first month and 4.7-star average rating."
+            },
+            project5: {
+                title: "Data Visualization Dashboard",
+                description: "An interactive dashboard for complex data analysis and visualization, enabling stakeholders to make data-driven decisions.",
+                overview: "Created a comprehensive analytics platform that transforms raw business data into actionable insights through interactive visualizations and real-time reporting.",
+                technologies: ["D3.js", "React", "PostgreSQL", "Python", "Apache Kafka", "Docker"],
+                features: [
+                    "Real-time data streaming and processing",
+                    "Interactive charts and graphs",
+                    "Custom report generation",
+                    "User role-based access control",
+                    "Export functionality for presentations"
+                ],
+                challenges: "Processing large volumes of data in real-time, creating intuitive visualizations for complex datasets, and ensuring data accuracy and consistency.",
+                outcome: "Improved decision-making speed by 50% and enabled data-driven strategies that increased revenue by 20%."
+            },
+            project6: {
+                title: "E-commerce Platform",
+                description: "A full-featured e-commerce solution with advanced search capabilities, payment processing, and inventory management.",
+                overview: "Built a scalable e-commerce platform from the ground up, featuring modern UI/UX, robust backend architecture, and comprehensive admin tools.",
+                technologies: ["Next.js", "Stripe API", "PostgreSQL", "Redis", "AWS", "TypeScript"],
+                features: [
+                    "Advanced product search and filtering",
+                    "Secure payment processing with multiple options",
+                    "Real-time inventory management",
+                    "Order tracking and notification system",
+                    "Admin dashboard for business insights"
+                ],
+                challenges: "Implementing secure payment processing, handling high traffic loads during peak times, and creating a seamless user experience across all devices.",
+                outcome: "Successfully processed over $500,000 in transactions within the first six months with 99.9% uptime and excellent customer feedback."
+            },
+            project7: {
+                title: "Machine Learning Model",
+                description: "A sophisticated machine learning model for predictive analytics, trained on large datasets to provide accurate forecasting.",
+                overview: "Developed and deployed a machine learning pipeline that analyzes historical data patterns to predict future trends with high accuracy.",
+                technologies: ["Python", "TensorFlow", "Scikit-learn", "Pandas", "Jupyter", "AWS SageMaker"],
+                features: [
+                    "Automated data preprocessing and feature engineering",
+                    "Multiple algorithm comparison and selection",
+                    "Model validation and performance monitoring",
+                    "Automated retraining pipeline",
+                    "RESTful API for model inference"
+                ],
+                challenges: "Handling missing and inconsistent data, preventing overfitting while maintaining high accuracy, and deploying models that can scale with increasing data volumes.",
+                outcome: "Achieved 92% prediction accuracy and enabled proactive decision-making that saved the organization $200,000 annually."
+            },
+            project8: {
+                title: "Blockchain Application",
+                description: "A decentralized application built on blockchain technology, featuring smart contracts and cryptocurrency integration.",
+                overview: "Developed a blockchain-based solution that leverages smart contracts to create a transparent, secure, and decentralized platform for digital transactions.",
+                technologies: ["Solidity", "Web3.js", "Ethereum", "React", "MetaMask", "Truffle"],
+                features: [
+                    "Smart contract development and deployment",
+                    "Cryptocurrency wallet integration",
+                    "Decentralized transaction processing",
+                    "Transparent and immutable record keeping",
+                    "User-friendly web interface"
+                ],
+                challenges: "Understanding complex blockchain concepts, optimizing gas costs for smart contracts, and creating user experiences that abstract away blockchain complexity.",
+                outcome: "Successfully launched on Ethereum mainnet with over 1,000 active users and facilitated secure, transparent transactions worth over $1 million."
+            }
+        };
 
+        // Get modal elements
+        const modal = document.getElementById('projectModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const closeBtn = document.querySelector('.close');
+
+        // Add click event listeners to all project cards
+        document.querySelectorAll('.projects').forEach(project => {
+            project.addEventListener('click', function() {
+                const projectKey = this.getAttribute('data-project');
+                const data = projectData[projectKey];
+                
+                if (data) {
+                    showProjectModal(data);
+                }
+            });
+        });
+
+        // Function to show modal with project data
+        function showProjectModal(data) {
+            modalTitle.textContent = data.title;
+            
+            modalContent.innerHTML = `
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #666;">${data.description}</p>
+                
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h3>Project Overview</h3>
+                        <p>${data.overview}</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Key Features</h3>
+                        <ul style="margin-left: 1.5rem;">
+                            ${data.features.map(feature => `<li style="margin-bottom: 0.5rem;">${feature}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-stack">
+                            ${data.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Challenges & Solutions</h3>
+                        <p>${data.challenges}</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Outcome & Impact</h3>
+                        <p>${data.outcome}</p>
+                    </div>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        // Close modal when clicking the X
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside of it
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 
 </body>
-
-
 
 </html>
