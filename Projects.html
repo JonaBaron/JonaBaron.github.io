@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jonathan's Projects</title>
@@ -8,201 +8,344 @@
     <script src="main.js" defer></script>
   </head>
 
-<body>
-
+  <body>
     <menu>
-        <div class="title">
-            <a href="/index.html"> 
-                <bold>JONATHAN</bold> 
-                <div class="dot"></div> 
-                <div class="home"></div>
-            </a>
-        </div>
-     
-         <div class="itemList">
-         <a class="MenuItem" href="/Projects.html">Projects</a>
-         <!--<div class="MenuItem">Contact</div> -->
-         <a class="MenuItem" href="/About.html">About Me</a>
-         </div>
-     
+      <div class="title">
+        <a href="/index.html">
+          <bold>JONATHAN</bold>
+          <div class="dot"></div>
+          <div class="home"></div>
+        </a>
+      </div>
+
+      <div class="itemList">
+        <a class="MenuItem" href="/Projects.html">Projects</a>
+        <!--<div class="MenuItem">Contact</div> -->
+        <a class="MenuItem" href="/About.html">About Me</a>
+      </div>
     </menu>
 
     <div class="container">
-        <div class="achievement">Achievements</div>
-        <div class="projects" data-project="crane">Remote control tower crane</div>
-        <div class="projects" data-project="project2">AI-Powered Web Application</div>
-        <div class="projects" data-project="project3">IoT Smart Home System</div>
-        <div class="projects" data-project="project4">Mobile Game Development</div>
-        <div class="projects" data-project="project5">Data Visualization Dashboard</div>
-        <div class="projects" data-project="project6">E-commerce Platform</div>
-        <div class="projects" data-project="project7">Machine Learning Model</div>
-        <div class="projects" data-project="project8">Blockchain Application</div>
+      <div class="achievement">Achievements</div>
+      <div class="projects" data-project="crane">Remote Control Tower Crane</div>
+      <div class="projects" data-project="project2">Peer Assessment Web Application</div>
+      <div class="projects" data-project="project3">Digital Room Occupancy Monitoring System</div>
+      <div class="projects" data-project="project4">Computer Engineering Product Design Project</div>
+      <div class="projects" data-project="project5">Autonomous Hovercraft</div>
+      <div class="projects" data-project="project6">C Ball Game</div>
+      <div class="projects" data-project="project7">Assembly Programming</div>
+      <div class="projects" data-project="project8">Machine Learning Model</div>
     </div>
 
     <!-- Modal -->
     <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2 id="modalTitle">Project Title</h2>
-            </div>
-            <div class="modal-body">
-                <div id="modalContent">
-                    <!-- Project content will be inserted here -->
-                </div>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle">Project Title</h2>
         </div>
+        <div class="modal-body">
+          <div id="modalContent">
+            <!-- Project content will be inserted here -->
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-        // Project data
-        const projectData = {
-            crane: {
-                title: "Remote Control Tower Crane",
-                description: "An innovative remote-controlled tower crane system designed for enhanced safety and precision in construction operations.",
-                overview: "This project involved developing a comprehensive remote control system for tower cranes, allowing operators to work from a safe distance while maintaining full control and visibility of crane operations.",
-                technologies: ["Arduino", "Raspberry Pi", "Wireless Communication", "Computer Vision", "Python", "C++"],
-                features: [
-                    "Real-time video feedback with multiple camera angles",
-                    "Precise load positioning with GPS integration",
-                    "Emergency stop systems and safety protocols",
-                    "Weather condition monitoring",
-                    "Remote diagnostics and maintenance alerts"
-                ],
-                challenges: "The main challenges included ensuring reliable wireless communication over long distances, implementing fail-safe mechanisms, and creating an intuitive control interface that maintains the precision required for construction work.",
-                outcome: "Successfully deployed on three construction sites, resulting in 40% reduction in operator risk and 25% improvement in operational efficiency."
-            },
-            project2: {
-                title: "AI-Powered Web Application",
-                description: "A sophisticated web application leveraging artificial intelligence to provide intelligent recommendations and automated decision-making capabilities.",
-                overview: "Built a full-stack web application that integrates machine learning algorithms to analyze user behavior and provide personalized recommendations in real-time.",
-                technologies: ["React", "Node.js", "TensorFlow", "MongoDB", "Express.js", "Python"],
-                features: [
-                    "Real-time user behavior analysis",
-                    "Personalized recommendation engine",
-                    "Automated content moderation",
-                    "Predictive analytics dashboard",
-                    "RESTful API with authentication"
-                ],
-                challenges: "Implementing real-time ML inference while maintaining low latency, handling large datasets efficiently, and ensuring model accuracy across diverse user segments.",
-                outcome: "Achieved 95% user satisfaction rate and 60% increase in user engagement through personalized experiences."
-            },
-            project3: {
-                title: "IoT Smart Home System",
-                description: "A comprehensive Internet of Things solution for home automation, featuring smart sensors, automated controls, and energy management.",
-                overview: "Designed and implemented a complete smart home ecosystem that monitors environmental conditions, automates lighting and climate control, and optimizes energy consumption.",
-                technologies: ["ESP32", "MQTT", "Node-RED", "InfluxDB", "Grafana", "Mobile App"],
-                features: [
-                    "Automated lighting based on occupancy and natural light",
-                    "Climate control with learning algorithms",
-                    "Energy consumption monitoring and optimization",
-                    "Security system with motion detection",
-                    "Mobile app for remote control and monitoring"
-                ],
-                challenges: "Ensuring reliable communication between multiple IoT devices, implementing robust security protocols, and creating an energy-efficient system that operates 24/7.",
-                outcome: "Reduced household energy consumption by 30% and provided seamless automation that adapts to family routines."
-            },
-            project4: {
-                title: "Mobile Game Development",
-                description: "An engaging mobile game featuring advanced graphics, multiplayer capabilities, and social integration.",
-                overview: "Developed a cross-platform mobile game with innovative gameplay mechanics, stunning visuals, and seamless multiplayer functionality.",
-                technologies: ["Unity", "C#", "Firebase", "Photon", "Blender", "Git"],
-                features: [
-                    "Cross-platform multiplayer gameplay",
-                    "Advanced 3D graphics and animations",
-                    "Social features and leaderboards",
-                    "In-app purchases and monetization",
-                    "Cloud save functionality"
-                ],
-                challenges: "Optimizing performance across different mobile devices, implementing fair multiplayer mechanics, and creating engaging gameplay that keeps players returning.",
-                outcome: "Launched successfully on both iOS and Android with over 100,000 downloads in the first month and 4.7-star average rating."
-            },
-            project5: {
-                title: "Data Visualization Dashboard",
-                description: "An interactive dashboard for complex data analysis and visualization, enabling stakeholders to make data-driven decisions.",
-                overview: "Created a comprehensive analytics platform that transforms raw business data into actionable insights through interactive visualizations and real-time reporting.",
-                technologies: ["D3.js", "React", "PostgreSQL", "Python", "Apache Kafka", "Docker"],
-                features: [
-                    "Real-time data streaming and processing",
-                    "Interactive charts and graphs",
-                    "Custom report generation",
-                    "User role-based access control",
-                    "Export functionality for presentations"
-                ],
-                challenges: "Processing large volumes of data in real-time, creating intuitive visualizations for complex datasets, and ensuring data accuracy and consistency.",
-                outcome: "Improved decision-making speed by 50% and enabled data-driven strategies that increased revenue by 20%."
-            },
-            project6: {
-                title: "E-commerce Platform",
-                description: "A full-featured e-commerce solution with advanced search capabilities, payment processing, and inventory management.",
-                overview: "Built a scalable e-commerce platform from the ground up, featuring modern UI/UX, robust backend architecture, and comprehensive admin tools.",
-                technologies: ["Next.js", "Stripe API", "PostgreSQL", "Redis", "AWS", "TypeScript"],
-                features: [
-                    "Advanced product search and filtering",
-                    "Secure payment processing with multiple options",
-                    "Real-time inventory management",
-                    "Order tracking and notification system",
-                    "Admin dashboard for business insights"
-                ],
-                challenges: "Implementing secure payment processing, handling high traffic loads during peak times, and creating a seamless user experience across all devices.",
-                outcome: "Successfully processed over $500,000 in transactions within the first six months with 99.9% uptime and excellent customer feedback."
-            },
-            project7: {
-                title: "Machine Learning Model",
-                description: "A sophisticated machine learning model for predictive analytics, trained on large datasets to provide accurate forecasting.",
-                overview: "Developed and deployed a machine learning pipeline that analyzes historical data patterns to predict future trends with high accuracy.",
-                technologies: ["Python", "TensorFlow", "Scikit-learn", "Pandas", "Jupyter", "AWS SageMaker"],
-                features: [
-                    "Automated data preprocessing and feature engineering",
-                    "Multiple algorithm comparison and selection",
-                    "Model validation and performance monitoring",
-                    "Automated retraining pipeline",
-                    "RESTful API for model inference"
-                ],
-                challenges: "Handling missing and inconsistent data, preventing overfitting while maintaining high accuracy, and deploying models that can scale with increasing data volumes.",
-                outcome: "Achieved 92% prediction accuracy and enabled proactive decision-making that saved the organization $200,000 annually."
-            },
-            project8: {
-                title: "Blockchain Application",
-                description: "A decentralized application built on blockchain technology, featuring smart contracts and cryptocurrency integration.",
-                overview: "Developed a blockchain-based solution that leverages smart contracts to create a transparent, secure, and decentralized platform for digital transactions.",
-                technologies: ["Solidity", "Web3.js", "Ethereum", "React", "MetaMask", "Truffle"],
-                features: [
-                    "Smart contract development and deployment",
-                    "Cryptocurrency wallet integration",
-                    "Decentralized transaction processing",
-                    "Transparent and immutable record keeping",
-                    "User-friendly web interface"
-                ],
-                challenges: "Understanding complex blockchain concepts, optimizing gas costs for smart contracts, and creating user experiences that abstract away blockchain complexity.",
-                outcome: "Successfully launched on Ethereum mainnet with over 1,000 active users and facilitated secure, transparent transactions worth over $1 million."
-            }
-        };
+      // Project data
+      const projectData = {
+        crane: {
+          title: "Remote Control Tower Crane",
+          description:
+            "An innovative remote-controlled tower crane system designed for enhanced safety and precision in construction operations.",
+          overview:
+            "This project involved developing a comprehensive remote control system for tower cranes, allowing operators to work from a safe distance while maintaining full control and visibility of crane operations.",
+          technologies: [
+            "Arduino",
+            "Raspberry Pi",
+            "Wireless Communication",
+            "Computer Vision",
+            "Python",
+            "C++",
+          ],
+          features: [
+            "Real-time video feedback with multiple camera angles",
+            "Precise load positioning with GPS integration",
+            "Emergency stop systems and safety protocols",
+            "Weather condition monitoring",
+            "Remote diagnostics and maintenance alerts",
+          ],
+          challenges:
+            "The main challenges included ensuring reliable wireless communication over long distances, implementing fail-safe mechanisms, and creating an intuitive control interface that maintains the precision required for construction work.",
+          outcome:
+            "Successfully deployed on three construction sites, resulting in 40% reduction in operator risk and 25% improvement in operational efficiency.",
+        },
+        project2: {
+          title: "InsightSphere - Peer Assessment System",
+          description:
+            "A comprehensive peer assessment platform designed for university team projects, enabling students to evaluate their teammates across four critical performance dimensions with real-time data handling and secure access.",
+          overview:
+            "Built a full-stack web application following Agile methodology that allows students to rate teammates on cooperation, conceptual contribution, practical contribution, and work ethic. The system features real-time chat capabilities, AI-powered chatbot integration, and comprehensive review management for instructors.",
+          technologies: [
+            "Node.js",
+            "Express.js",
+            "PostgreSQL",
+            "EJS",
+            "Bootstrap",
+            "Google Gemini API",
+            "bcrypt",
+            "multer",
+            "csv-parser",
+            "json2csv",
+          ],
+          features: [
+            "Team member evaluation across four performance dimensions",
+            "Real-time data handling with PostgreSQL database",
+            "User-friendly responsive interface with Bootstrap",
+            "Secure access with environment variables and robust backend security",
+            "Instructor dashboard with detailed and summary review visibility",
+            "CSV export functionality for review data",
+            "Real-time chatroom for group communication",
+            "AI-powered chatbot integration using Google's Gemini API",
+            "Scalable database schema for future expansion",
+          ],
+          challenges:
+            "Implementing secure peer evaluation system with real-time chat functionality, integrating AI chatbot capabilities while maintaining data privacy, ensuring scalable database design for multi-team environments, and delivering incremental improvements through Agile methodology across four sprints.",
+          outcome:
+            "Successfully delivered a middle-fidelity prototype serving as foundation for a fully functional peer assessment platform, with comprehensive evaluation system, real-time communication features, and instructor management tools ready for university deployment.",
+        },
+        project3: {
+          title: "Digital Room Occupancy Monitoring System",
+          description:
+            "A sophisticated FPGA-based digital circuit designed to monitor and track real-time room occupancy using dual sensor technology with programmable maximum capacity constraints and safety features.",
+          overview:
+            "Designed and implemented a sequential digital system using VHDL that tracks people entering and exiting a room through dual door sensors. The system features a programmable occupancy limit that prevents entry when maximum capacity is reached while allowing exits, ensuring accurate people counting with protection against negative values.",
+          technologies: [
+            "VHDL",
+            "Vivado",
+            "ModelSim",
+            "FPGA (Xilinx Artix-7)",
+            "Digital Logic Design",
+            "Sequential Circuit Design",
+          ],
+          features: [
+            "Real-time people counting with dual sensor inputs",
+            "Programmable maximum capacity limit (8-bit configurable)",
+            "Entry prevention when at maximum capacity",
+            "Exit allowance regardless of capacity status",
+            "Protection against negative people count",
+            "Asynchronous reset functionality",
+            "Synchronous sequential circuit with clock-controlled state changes",
+            "Comprehensive simulation and verification testbenches",
+            "Optimized resource utilization with efficient LUT usage",
+          ],
+          challenges:
+            "Implementing accurate counting logic while preventing overflow beyond maximum capacity and underflow below zero occupancy. Optimizing the design through multiple iterations to achieve the most efficient resource utilization, balancing functionality with FPGA resource constraints, and ensuring proper sequential timing behavior while minimizing propagation delays.",
+          outcome:
+            "Successfully delivered an optimized final design using only 18 LUTs compared to 29 LUTs in intermediate designs, achieving 38% resource reduction. The final implementation demonstrated correct behavioral verification through extensive simulation testing and met all project requirements with improved propagation delay and compact horizontal layout on the FPGA device.",
+        },
+        project4: {
+          title: "AiFeel - AI-Powered Emotion Recognition App",
+          description:
+            "A healthcare-focused mobile application that monitors emotional well-being through real-time voice-based mood detection using AI algorithms and vocal analysis captured via wearable sound sensors.",
+          overview:
+            "Developed a patient-centered mobile platform combining ESP32-WROOM microcontroller with SEN0526 I2S microphone for high-fidelity audio capture, streaming over TCP/Wi-Fi to Android application. Implemented MFCC feature extraction and lightweight CNN model converted to TensorFlow Lite for real-time emotion classification in under 15ms per inference, with comprehensive doctor-patient dashboard system.",
+          technologies: [
+            "Android",
+            "ESP32-WROOM",
+            "TensorFlow Lite",
+            "Firebase Realtime Database",
+            "Java",
+            "MFCC",
+            "CNN",
+            "TCP/Wi-Fi",
+            "SEN0526 I2S Microphone",
+            "Li-ion Battery",
+            "LM2596 Voltage Regulator",
+            "TP4056 USB-C Charging",
+          ],
+          features: [
+            "Real-time emotion recognition from voice patterns (Joy, Fear, Anger, Neutral, etc.)",
+            "Offline speech-to-text transcription using Vosk library",
+            "Dual doctor-patient dashboard system with role-based access",
+            "QR code-based patient-doctor assignment and onboarding",
+            "Wi-Fi management for ESP32 connectivity and audio streaming",
+            "Interactive mood timeline visualization and history tracking",
+            "Portable hardware design with 2000mAh Li-ion battery",
+            "Privacy-focused local audio processing (raw audio never leaves device)",
+            "Firebase integration for secure data storage and synchronization",
+            "MVC-structured Android architecture with comprehensive testing",
+          ],
+          challenges:
+            "Optimizing audio connectivity protocols (evaluated Bluetooth A2DP, BLE, and TCP/Wi-Fi), ensuring model accuracy across diverse voices and accents while minimizing bias, maintaining user privacy with local processing requirements, designing portable hardware with sufficient battery life, balancing real-time performance with accuracy in emotion detection, and implementing comprehensive doctor-patient relationship management.",
+          outcome:
+            "Successfully achieved over 80% accuracy in matching users' self-reported moods with real-time emotion detection under 15ms per inference. Delivered fully functional hardware-software integration with estimated production cost under $50 per unit, comprehensive testing suite with 95%+ pass rate, and scalable architecture supporting both individual and clinical usage with robust privacy protection.",
+        },
+        project5: {
+          title: "Autonomous Maze-Navigating Hovercraft",
+          description:
+            "An autonomous hovercraft designed to navigate through a maze by hovering over 1mm, 2mm, and 3mm obstacles while detecting walls, executing turns, and stopping at an overhead bar within 120 seconds.",
+          overview:
+            "Designed and constructed a rectangular-base hovercraft using dual-fan propulsion system with lift and thrust capabilities. Implemented autonomous navigation using IR sensors, IMU for orientation tracking, and servo motor control for directional changes. Developed custom algorithms for wall detection, turn execution, and maze pattern recognition with real-time sensor feedback.",
+          technologies: [
+            "C/C++",
+            "Microcontroller Programming",
+            "IR Sensors",
+            "IMU (Inertial Measurement Unit)",
+            "Servo Motors",
+            "Fan Control Systems",
+            "SolidWorks CAD",
+            "Blender 3D Modeling",
+            "PWM Control",
+            "Embedded Systems",
+          ],
+          features: [
+            "Autonomous maze navigation with wall-following algorithms",
+            "Dual-fan propulsion system (lift fan for hovering, thrust fan for movement)",
+            "Real-time obstacle detection and avoidance using IR sensors",
+            "IMU-based orientation tracking and yaw correction algorithms",
+            "Servo-controlled directional steering system",
+            "Custom skirt design with segmented construction for minimal air leakage",
+            "Ability to hover over 1mm, 2mm, and 3mm obstacles",
+            "Pattern recognition for alternating left-right maze turns",
+            "Overhead bar detection for stopping mechanism",
+            "Lightweight rectangular base design for optimal weight distribution",
+          ],
+          challenges:
+            "Overcoming IMU drift during high angular velocity turns, designing effective air cushion skirt with minimal friction, achieving proper weight distribution for stability, implementing accurate turn algorithms that prevent oversteering, managing power consumption with dual LiPo battery system, and developing robust sensor-based navigation that handles maze pattern variations and wall detection accuracy.",
+          outcome:
+            "Successfully demonstrated hovercraft capable of hovering over 3.5mm height (exceeding 3mm requirement) with 8.59N total weight. Achieved initial maze navigation with successful straight-line movement and first turn execution. Identified and documented critical turning algorithm improvements needed for complete maze traversal. Delivered comprehensive engineering analysis including fluid dynamics simulation, power calculations, and detailed construction methodology with lessons learned for future iterations.",
+        },
+        project6: {
+          title: "Computational Geometry Library with SDL Graphics Integration",
+          description:
+            "A comprehensive C library combining advanced geometric computation functions with SDL-based graphics rendering capabilities for mathematical visualization and computational geometry applications.",
+          overview:
+            "Developed a dual-purpose library featuring a complete geometric analysis toolkit implementing Cramer's method for solving linear systems, line intersection algorithms, and segment analysis functions. Integrated with SDL graphics wrapper providing drawing primitives, color management, and mouse interaction for real-time geometric visualization and computational geometry demonstrations.",
+          technologies: [
+            "C Programming",
+            "SDL2 Graphics Library",
+            "Linear Algebra",
+            "Computational Geometry",
+            "Cramer's Method",
+            "Mathematical Computing",
+            "Graphics Programming",
+            "Event Handling",
+          ],
+          features: [
+            "Two-equation linear system solver using Cramer's determinant method",
+            "Line equation calculation from two points with vertical line handling",
+            "Line-line intersection detection and computation",
+            "Segment-segment intersection analysis with boundary checking",
+            "Point-in-segment membership testing with floating-point precision handling",
+            "Euclidean distance calculation using Pythagorean theorem",
+            "SDL graphics wrapper with coordinate system transformation",
+            "Drawing primitives for points, segments, and rectangles",
+            "Color management and transparency support",
+            "Mouse position tracking and event handling",
+            "Real-time screen updates and rendering pipeline",
+          ],
+          challenges:
+            "Implementing robust floating-point arithmetic for geometric calculations while avoiding precision errors, handling edge cases for vertical and horizontal lines in intersection algorithms, managing coordinate system transformations between mathematical and screen coordinates, ensuring accurate segment membership testing despite floating-point representation limitations, and creating efficient SDL wrapper functions that maintain mathematical accuracy while providing intuitive graphics interface.",
+          outcome:
+            "Successfully delivered a complete computational geometry library with full mathematical rigor, supporting complex geometric operations including line intersections, segment analysis, and linear system solutions. Achieved seamless integration with SDL graphics providing real-time visualization capabilities with proper coordinate transformation, robust error handling, and comprehensive geometric utility functions suitable for educational and research applications.",
+        },
+        project7: {
+          title: "ARM Cortex-M4 Assembly Programming Laboratory Exercises",
+          description:
+            "A comprehensive collection of ARM Thumb assembly language programming exercises covering fundamental concepts from basic arithmetic operations to advanced data structure manipulation and string processing on Cortex-M4 microcontroller architecture.",
+          overview:
+            "Developed a series of progressive assembly language programs demonstrating core embedded programming concepts including memory addressing modes, arithmetic operations, vector mathematics, array indexing, loop constructs, and string manipulation. All programs target ARM Cortex-M4 processor using Thumb instruction set with proper memory management and register optimization.",
+          technologies: [
+            "ARM Assembly Language",
+            "Cortex-M4 Architecture",
+            "Thumb Instruction Set",
+            "Embedded Systems Programming",
+            "Memory Management",
+            "Register Optimization",
+            "Low-level Programming",
+          ],
+          features: [
+            "Basic arithmetic operations with immediate values and register manipulation",
+            "Memory-based data operations with load/store instructions",
+            "3D vector dot product calculation using multiplication and accumulation",
+            "Comprehensive addressing mode demonstrations (immediate, register, indexed, pre/post-increment)",
+            "2D array indexing with row-major order calculation",
+            "Iterative loop constructs with conditional branching and counter management",
+            "String processing with ASCII character manipulation and case conversion",
+            "Proper ARM Cortex-M4 startup code with vector table and memory initialization",
+            "Data section management with byte arrays and reserved memory spaces",
+            "Optimized register usage following ARM calling conventions",
+          ],
+          challenges:
+            "Mastering low-level memory addressing modes and pointer arithmetic, implementing efficient loop constructs with proper condition checking and branch prediction, managing limited register resources while maintaining code readability, handling byte-level data operations with proper alignment, understanding ARM Thumb instruction encoding limitations, and ensuring proper memory layout with data and text sections while maintaining compatibility with Cortex-M4 architecture constraints.",
+          outcome:
+            "Successfully completed comprehensive ARM assembly programming curriculum demonstrating proficiency in embedded systems programming fundamentals. Achieved efficient implementation of mathematical operations, data structure manipulation, and string processing algorithms with optimal register usage and memory management. Delivered well-documented, modular assembly code suitable for embedded applications with proper error handling and architectural compliance.",
+        },
+        project8: {
+          title: "MNIST Handwritten Digit Classifier with Logistic Regression",
+          description:
+            "An educational machine learning application that classifies handwritten digits (0-9) from grayscale images using logistic regression, built as part of COMP 472 Artificial Intelligence coursework to demonstrate fundamental AI and machine learning concepts.",
+          overview:
+            "Developed a complete machine learning pipeline using the MNIST dataset to classify handwritten digits. Implemented data preprocessing, visualization, model training using scikit-learn's logistic regression, and comprehensive performance evaluation. The project serves as a foundational introduction to Python-based AI libraries and core machine learning workflows.",
+          technologies: [
+            "Python 3",
+            "NumPy",
+            "scikit-learn",
+            "Matplotlib",
+            "Seaborn",
+            "Keras",
+            "MNIST Dataset",
+            "Machine Learning",
+            "Data Visualization",
+            "Statistical Analysis",
+          ],
+          features: [
+            "MNIST handwritten digits dataset loading and preprocessing",
+            "Interactive data visualization with sample digit image display",
+            "Image data reshaping and normalization for machine learning",
+            "Logistic regression model training using scikit-learn",
+            "Comprehensive model evaluation with confusion matrix visualization",
+            "Detailed classification report with precision, recall, and F1-scores",
+            "Performance visualization using both matplotlib and seaborn",
+            "Multi-class classification for digits 0-9",
+            "Educational code structure with clear documentation",
+            "Baseline model implementation for learning purposes",
+          ],
+          challenges:
+            "Understanding fundamental machine learning concepts including data preprocessing and feature engineering, mastering Python scientific computing libraries (NumPy, scikit-learn, matplotlib), implementing proper train-test data split and evaluation methodologies, interpreting confusion matrices and classification metrics, handling multi-class logistic regression for 10-digit classification, and balancing model simplicity for educational purposes while achieving meaningful performance on the MNIST benchmark dataset.",
+          outcome:
+            "Successfully implemented a complete machine learning pipeline demonstrating core AI concepts and Python library usage. Achieved baseline performance on MNIST digit classification with comprehensive evaluation metrics including confusion matrix analysis and detailed classification reports. Delivered well-documented educational code suitable for demonstrating fundamental machine learning workflows, data visualization techniques, and model evaluation methodologies for academic learning objectives.",
+        },
+      };
 
-        // Get modal elements
-        const modal = document.getElementById('projectModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalContent = document.getElementById('modalContent');
-        const closeBtn = document.querySelector('.close');
+      // Get modal elements
+      const modal = document.getElementById("projectModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalContent = document.getElementById("modalContent");
+      const closeBtn = document.querySelector(".close");
 
-        // Add click event listeners to all project cards
-        document.querySelectorAll('.projects').forEach(project => {
-            project.addEventListener('click', function() {
-                const projectKey = this.getAttribute('data-project');
-                const data = projectData[projectKey];
-                
-                if (data) {
-                    showProjectModal(data);
-                }
-            });
+      // Add click event listeners to all project cards
+      document.querySelectorAll(".projects").forEach((project) => {
+        project.addEventListener("click", function () {
+          const projectKey = this.getAttribute("data-project");
+          const data = projectData[projectKey];
+
+          if (data) {
+            showProjectModal(data);
+          }
         });
+      });
 
-        // Function to show modal with project data
-        function showProjectModal(data) {
-            modalTitle.textContent = data.title;
-            
-            modalContent.innerHTML = `
-                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #666;">${data.description}</p>
+      // Function to show modal with project data
+      function showProjectModal(data) {
+        modalTitle.textContent = data.title;
+
+        modalContent.innerHTML = `
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #666;">${
+                  data.description
+                }</p>
                 
                 <div class="project-details">
                     <div class="detail-section">
@@ -213,14 +356,24 @@
                     <div class="detail-section">
                         <h3>Key Features</h3>
                         <ul style="margin-left: 1.5rem;">
-                            ${data.features.map(feature => `<li style="margin-bottom: 0.5rem;">${feature}</li>`).join('')}
+                            ${data.features
+                              .map(
+                                (feature) =>
+                                  `<li style="margin-bottom: 0.5rem;">${feature}</li>`
+                              )
+                              .join("")}
                         </ul>
                     </div>
                     
                     <div class="detail-section">
                         <h3>Technologies Used</h3>
                         <div class="tech-stack">
-                            ${data.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                            ${data.technologies
+                              .map(
+                                (tech) =>
+                                  `<span class="tech-tag">${tech}</span>`
+                              )
+                              .join("")}
                         </div>
                     </div>
                     
@@ -235,34 +388,32 @@
                     </div>
                 </div>
             `;
-            
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
+      }
+
+      // Close modal when clicking the X
+      closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      });
+
+      // Close modal when clicking outside of it
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
         }
+      });
 
-        // Close modal when clicking the X
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-
-        // Close modal when clicking outside of it
-        window.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape' && modal.style.display === 'block') {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.style.display === "block") {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
